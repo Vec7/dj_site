@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+{{ title }}
+
+{% for i in values %}
+<p>{{i}}</p>
+{% endfor %}
+
+
+{% endblock %}
