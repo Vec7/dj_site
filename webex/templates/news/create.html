@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+{{ title }}
+Form for create news in DB
+
+<h1>ADD NEW POST</h1>
+<form method="post">
+    {% csrf_token %}
+
+    {{ form.title }}
+    {{ form.anons }}
+    {{ form.full_text }}
+    {{ form.date }}
+    <span>{{ error }}</span>
+    <button class="btn btn-success" type="submit">SUBMIT</button>
+</form>
+
+{% endblock %}

@@ -7,6 +7,9 @@ class Articles(models.Model):
     full_text = models.TextField('Статья')
     date = models.DateTimeField('Дата публикации')
 
+    def get_absolute_url(self):
+        return f'/news/{self.id}'
+
     def __str__(self):
         return self.title
 
